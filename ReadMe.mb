@@ -1,0 +1,10 @@
+1. Run test via Gradle -
+   1.Run job ->verification
+   2.From test package via JUnit5
+   3. in Terminal - /gradlew clean - i test
+
+2. Get report via
+   1. Allure - other -> allureServe
+   2. JUnit - build->reports->tests->test-index.html
+
+

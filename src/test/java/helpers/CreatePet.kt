@@ -5,7 +5,7 @@ class CreatePet {
     {
       "id": 12,
       "category": {
-        "id": 12,
+        "id": 15,
         "name": "Sirius"
       },
       "name": "doggie",
@@ -14,11 +14,11 @@ class CreatePet {
       ],
       "tags": [
         {
-          "id": 12,
+          "id": 16,
           "name": "sweet"
         }
       ],
       "status": "available"
     }
-""".trimIndent()
+"""
 }

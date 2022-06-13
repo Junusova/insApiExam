@@ -1,5 +1,6 @@
 package controller
 
+import io.restassured.RestAssured
 import io.restassured.RestAssured.given
 import io.restassured.builder.RequestSpecBuilder
 import io.restassured.http.ContentType
@@ -14,14 +15,13 @@ private fun requestSpec(): RequestSpecification? {
             .build()
 }
 
-fun createPetExecutePostApiMethod(
-        requestPayload: String?,
+fun deletePetExecuteDeleteApiMethod(
+        petId: Int,
 ):
         ValidatableResponse {
     return given(
-            requestSpec())
-                 .body(requestPayload).
+                 requestSpec()).
             `when`().
-                  post("/pet").
-            then()
+                 delete("/pet/$petId").
+             then()
 }

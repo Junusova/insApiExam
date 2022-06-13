@@ -14,14 +14,14 @@ private fun requestSpec(): RequestSpecification? {
             .build()
 }
 
-fun createPetExecutePostApiMethod(
+fun updatePetExecutePutApiMethod(
         requestPayload: String?,
 ):
         ValidatableResponse {
     return given(
             requestSpec())
-                 .body(requestPayload).
+                .body(requestPayload).
             `when`().
-                  post("/pet").
+                 put("/pet").
             then()
 }
